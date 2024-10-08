@@ -1,6 +1,5 @@
 package com.extend.authorization.persistence;
 
-import com.extend.authorization.model.Group;
 import com.extend.authorization.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
