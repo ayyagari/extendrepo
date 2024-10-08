@@ -1,0 +1,53 @@
+# Java and class files
+*.class
+*.jar
+*.war
+*.ear
+
+# Gradle specific files
+.gradle/
+build/
+
+# Ignore Gradle wrapper jar file
+!gradle-wrapper.jar
+!gradle-wrapper.properties
+
+# IntelliJ IDEA specific files
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# Lombok generated files
+*.lombok.config
+
+# MacOS specific files
+.DS_Store
+
+# Windows specific files
+Thumbs.db
+ehthumbs.db
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+tmp/
+*.tmp
+
+# Spring Boot specific files
+target/
+!src/main/resources/static/
+!src/main/resources/templates/
+
+# Ignore compiled output and libraries
+*.log
+*.class
+*.jar
+*.war
+*.ear
+*.swp
+*.swo
+*.pyc

@@ -1,0 +1,21 @@
+plugins {
+    id 'org.springframework.boot' version '3.3.4'
+    id 'java'
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    // Lombok dependency
+    compileOnly 'org.projectlombok:lombok:1.18.28'
+    annotationProcessor 'org.projectlombok:lombok:1.18.28'
+
+    // Optional: Lombok for test classes
+    testCompileOnly 'org.projectlombok:lombok:1.18.28'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.28'
+}
+
+tasks.named('bootJar') {
+    mainClass = 'com.example.accounts.AccountsServiceApplication'  // Specify the main class for accounts service
+}
