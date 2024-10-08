@@ -24,7 +24,7 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
         return http
-                .csrf(csrf -> csrf.disable()) //Allow state modifying http verbs like POST, DELETE etc by disabling csrf. A temp way to test, not to be in prod.
+                .csrf(AbstractHttpConfigurer::disable) //Allow state modifying http verbs like POST, DELETE etc by disabling csrf. A temp way to test, not to be in prod.
                 .authorizeHttpRequests((auth) -> auth
                         .requestMatchers(HttpMethod.POST, "/api/**").authenticated()
                         .requestMatchers(HttpMethod.GET, "/api/**").authenticated()

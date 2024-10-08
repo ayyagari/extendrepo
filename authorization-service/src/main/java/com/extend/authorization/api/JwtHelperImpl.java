@@ -12,7 +12,7 @@ import java.util.Date;
 
 @Component
 public class JwtHelperImpl implements JwtHelper {
-    private String secretKey = "myReallyReallyReallyLongJwtSecretKey";
+    private final String secretKey = "myReallyReallyReallyLongJwtSecretKey";
 
     public boolean isTokenValid(String token) {
 

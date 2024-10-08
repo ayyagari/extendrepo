@@ -43,11 +43,6 @@ target/
 !src/main/resources/templates/
 
 # Ignore compiled output and libraries
-*.log
-*.class
-*.jar
-*.war
-*.ear
 *.swp
 *.swo
 *.pyc

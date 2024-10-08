@@ -36,7 +36,7 @@ Start the service from command line using `gradle bootRun`. By default, the serv
 
 ### POST
 For a granted access, the request (using Httpie) might look like this:
-```json
+```text
 http POST localhost:9001/v1/authorize token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJFeHRlbmRzIEF1dGgiLCJpYXQiOjE3Mjg0MDAyMDksImV4cCI6MTc1OTkzNjIwOSwiYXVkIjoiYXV0aHouZXh0ZW5kLmNvbSIsInN1YiI6IjIxMTViZTdmLTY4YzItNDE5ZC05NzgxLTc4OWQxNjU4ODA3MSIsInVzZXJzIjoiQURNSU5TIn0.EK27kkABUWiccYDqepeRQQ-27qJ41UKkDjRCCKh-M24 requestedUri=v1/accounts requestedMethod=GET
 HTTP/1.1 200
 Connection: keep-alive
@@ -52,7 +52,7 @@ Transfer-Encoding: chunked
 
 ```
 For a denied access, the request might look like this:
-```json
+```text
 http POST localhost:9001/v1/authorize token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJFeHRlbmRzIEF1dGgiLCJpYXQiOjE3MjgzMzEwMzEsImV4cCI6MTc1OTg4MDgzNSwiYXVkIjoiYXV0aHouZXh0ZW5kLmNvbSIsInN1YiI6IjY5ZjExYmUyLWExNTUtNDZhNC04MDIyLTM1YjAyYWQ0MDhmMCIsImdyb3VwcyI6InVzZXJzIn0.Rf6v_vFPLWaycIqO2UTRnQtE4x01ByyAum3OUymiknw requestedUri=v1/accounts requestedMethod=POST
 HTTP/1.1 200
 Connection: keep-alive

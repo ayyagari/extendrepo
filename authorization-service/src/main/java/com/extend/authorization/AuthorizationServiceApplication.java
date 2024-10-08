@@ -7,9 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class AuthorizationServiceApplication {
 
-    private int age;
-
-    public static void main(String[] args) throws CloneNotSupportedException {
+    public static void main(String[] args) {
         SpringApplication.run(AuthorizationServiceApplication.class, args);
     }
 

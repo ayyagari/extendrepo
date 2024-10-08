@@ -54,7 +54,7 @@ Start the service from command line using `gradle bootRun`. By default, the serv
 Using Httpie, a GET request with valid JWT token might look like this:
 ` http GET localhost:8000/api/v1/accounts Authorization:'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJFeHRlbmRzIEF1dGgiLCJpYXQiOjE3MjgzMzEwMzEsImV4cCI6MTc1OTg4MDgzNSwiYXVkIjoiYXV0aHouZXh0ZW5kLmNvbSIsInN1YiI6IjY5ZjExYmUyLWExNTUtNDZhNC04MDIyLTM1YjAyYWQ0MDhmMCIsImdyb3VwcyI6InVzZXJzIn0.Rf6v_vFPLWaycIqO2UTRnQtE4x01ByyAum3OUymiknw'`
 Response might look like this:
-```json
+```text
 HTTP/1.1 200
 Cache-Control: no-cache, no-store, max-age=0, must-revalidate
 Connection: keep-alive
@@ -89,7 +89,7 @@ X-XSS-Protection: 0
 
 ```
 For a GET request with Httpie, and without Authorization header will fail like this:
-```json
+```text
 http GET localhost:8000/api/v1/accounts
 HTTP/1.1 403
 Cache-Control: no-cache, no-store, max-age=0, must-revalidate
@@ -106,7 +106,7 @@ X-XSS-Protection: 0
 ```
 ### POST
 A POST request to create a new user account with valid JWT token might look like this:
-```json
+```text
 http POST localhost:8000/api/v1/accounts Authorization:'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJFeHRlbmRzIEF1dGgiLCJpYXQiOjE3Mjg0MDAyMDksImV4cCI6MTc1OTkzNjIwOSwiYXVkIjoiYXV0aHouZXh0ZW5kLmNvbSIsInN1YiI6IjIxMTViZTdmLTY4YzItNDE5ZC05NzgxLTc4OWQxNjU4ODA3MSIsInVzZXJzIjoiQURNSU5TIn0.EK27kkABUWiccYDqepeRQQ-27qJ41UKkDjRCCKh-M24' userId=test-user-id-1
 HTTP/1.1 200
 Cache-Control: no-cache, no-store, max-age=0, must-revalidate
@@ -127,7 +127,7 @@ X-XSS-Protection: 0
 }
 ```
 An invalid request (due to invalid JWT token, see ZZZZ added at the end of token value) might be like this:
-```json
+```text
 http POST localhost:8000/api/v1/accounts Authorization:'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJFeHRlbmRzIEF1dGgiLCJpYXQiOjE3Mjg0MDAyMDksImV4cCI6MTc1OTkzNjIwOSwiYXVkIjoiYXV0aHouZXh0ZW5kLmNvbSIsInN1YiI6IjIxMTViZTdmLTY4YzItNDE5ZC05NzgxLTc4OWQxNjU4ODA3MSIsInVzZXJzIjoiQURNSU5TIn0.EK27kkABUWiccYDqepeRQQ-27qJ41UKkDjRCCKh-M24ZZZZ' userId=test-user-id-2
 HTTP/1.1 403
 Cache-Control: no-cache, no-store, max-age=0, must-revalidate
