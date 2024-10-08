@@ -1,6 +1,8 @@
-package com.extend.accounts.api.security.auth;
+package com.extend.authorization.model;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor

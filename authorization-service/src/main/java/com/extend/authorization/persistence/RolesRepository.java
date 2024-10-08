@@ -1,7 +1,7 @@
 package com.extend.authorization.persistence;
 
-import com.extend.authorization.model.Group;
+import com.extend.authorization.model.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface GroupsRepository extends JpaRepository<Group, String> {
+public interface RolesRepository extends JpaRepository<Role, String> {
 }

@@ -1,4 +1,4 @@
-package com.extend.accounts.api.security.auth;
+package com.extend.authorization.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

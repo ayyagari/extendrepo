@@ -9,8 +9,8 @@
 build/
 
 # Ignore Gradle wrapper jar file
-!gradle-wrapper.jar
-!gradle-wrapper.properties
+#!gradle-wrapper.jar
+#!gradle-wrapper.properties
 
 # IntelliJ IDEA specific files
 .idea/

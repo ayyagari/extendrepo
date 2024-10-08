@@ -8,4 +8,4 @@ pluginManagement {
 }
 
 rootProject.name = 'extendrepo'
-include 'users-service', 'accounts-service', 'authorization-service'
+include 'accounts-service', 'authorization-service'

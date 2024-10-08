@@ -1,7 +1,7 @@
-package com.extend.users.persistence;
+package com.extend.accounts.persistence;
 
-import com.extend.users.model.User;
+import com.extend.accounts.model.Account;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface UsersRepository extends JpaRepository<User, String> {
+public interface AccountsRepository extends JpaRepository<Account, String> {
 }

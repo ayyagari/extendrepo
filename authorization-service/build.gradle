@@ -1,24 +1,28 @@
 plugins {
+    id 'org.springframework.boot' version '3.3.4'
     id 'java'
-    id 'io.spring.dependency-management' version '1.1.0'
 }
 
-java {
-    sourceCompatibility = JavaVersion.VERSION_17
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    implementation 'io.jsonwebtoken:jjwt-api:0.11.2'
+    runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.11.2'
+    runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.11.2'
+
+    // Lombok dependency
+    compileOnly 'org.projectlombok:lombok:1.18.28'
+    annotationProcessor 'org.projectlombok:lombok:1.18.28'
+
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    runtimeOnly 'com.h2database:h2'
+
+    // Optional: Lombok for test classes
+    testCompileOnly 'org.projectlombok:lombok:1.18.28'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.28'
 }
 
-allprojects {
-    group = 'com.extend'
-    version = '1.0.0-SNAPSHOT'
-
-    repositories {
-        mavenCentral()
-    }
+tasks.named('bootJar') {
+    mainClass = 'com.extend.authorization.AuthorizationApplication'  // Specify your main class here
 }
-
-subprojects {
-    apply plugin: 'java'
-    apply plugin: 'io.spring.dependency-management'
-}
-
-

@@ -1,7 +1,7 @@
 package com.extend.authorization.persistence;
 
-import com.extend.authorization.model.Role;
+import com.extend.authorization.model.Permission;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface RolesRepository extends JpaRepository<Role, String> {
+public interface PermissionsRepository extends JpaRepository<Permission, String> {
 }

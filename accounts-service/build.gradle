@@ -6,10 +6,23 @@ plugins {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+
+    implementation 'io.jsonwebtoken:jjwt-api:0.11.2'
+    runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.11.2'
+    runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.11.2'
+
+    implementation 'javax.validation:validation-api:2.0.1.Final'
+
+    implementation 'org.apache.httpcomponents:httpclient:4.5.14'
+    implementation 'org.apache.httpcomponents:httpcore:4.4.15'
 
     // Lombok dependency
     compileOnly 'org.projectlombok:lombok:1.18.28'
     annotationProcessor 'org.projectlombok:lombok:1.18.28'
+
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    runtimeOnly 'com.h2database:h2'
 
     // Optional: Lombok for test classes
     testCompileOnly 'org.projectlombok:lombok:1.18.28'
@@ -17,5 +30,5 @@ dependencies {
 }
 
 tasks.named('bootJar') {
-    mainClass = 'com.example.accounts.AccountsServiceApplication'  // Specify the main class for accounts service
+    mainClass = 'com.extend.accounts.AccountsServiceApplication'  // Specify the main class for accounts service
 }

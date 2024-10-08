@@ -1,14 +1,16 @@
-package com.extend.users;
+package com.extend.authorization;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
 @SpringBootApplication
-public class UsersServiceApplication {
+public class AuthorizationServiceApplication {
 
-    public static void main(String[] args)  {
-        SpringApplication.run(UsersServiceApplication.class, args);
+    private int age;
+
+    public static void main(String[] args) throws CloneNotSupportedException {
+        SpringApplication.run(AuthorizationServiceApplication.class, args);
     }
 
 }

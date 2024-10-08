@@ -1,27 +1,30 @@
 package com.extend.accounts.api;
 
 import com.extend.accounts.model.Account;
-import com.extend.accounts.service.AccountsRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.extend.accounts.service.AccountsService;
+import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
+import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
+
 @RestController
-@RequestMapping("/v1/accounts")
+@RequestMapping("api/v1/accounts")
 public class AccountsController {
-    final AccountsRepository accountsRepository;
+    final AccountsService accountsService;
 
-    public AccountsController(AccountsRepository accountsRepository) {
-        this.accountsRepository = accountsRepository;
+    public AccountsController(AccountsService accountsService) {
+        this.accountsService = accountsService;
     }
 
-    @GetMapping()
+    @GetMapping(produces = APPLICATION_JSON_VALUE)
     public List<Account> getAccounts() {
-        return accountsRepository.getAllAccounts();
+        return accountsService.getAllAccounts();
     }
 
+    @PostMapping(produces = APPLICATION_JSON_VALUE,
+            consumes = APPLICATION_JSON_VALUE)
+    public Account createAccount(@RequestBody Account account) {
+        return accountsService.createAccount(account);
+    }
 }

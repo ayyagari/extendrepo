@@ -4,6 +4,7 @@ import com.extend.accounts.model.Account;
 
 import java.util.List;
 
-public interface AccountsRepository {
+public interface AccountsService {
     List<Account> getAllAccounts();
+    Account createAccount(Account account);
 }
